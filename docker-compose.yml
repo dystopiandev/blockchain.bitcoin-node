@@ -8,11 +8,8 @@ services:
     command:
       -printtoconsole
       -rest
-      -rpcallowip=10.211.0.0/16
-      -rpcallowip=172.17.0.0/16
-      -rpcallowip=192.168.0.0/16
+      -rpcbind=0.0.0.0:8332
       -rpcpassword=${RPC_PASSWORD}
-      -rpcport=8332
       -rpcuser=${RPC_USER}
       -server
       ${EXTRA_ARGS:-}
