@@ -20,4 +20,4 @@ services:
     ports:
       - 8332:8332
     volumes:
-      - ./.bitcoin:/home/bitcoin/.bitcoin
+      - ${DATA_DIR}:/home/bitcoin/.bitcoin
