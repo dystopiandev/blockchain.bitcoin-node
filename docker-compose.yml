@@ -3,7 +3,7 @@ version: '3.9'
 services:
   bitcoin-core:
     build:
-      context: ./bitcoin-core/${DISTRO:-debian}
+      context: ./bitcoin-core/${VERSION_FLAVOUR:-22.0-debian}
       dockerfile: Dockerfile
     command:
       -printtoconsole
