@@ -16,5 +16,6 @@ services:
       -rpcport=18443
       -rpcuser=${RPC_USER}
       -server
+      ${EXTRA_ARGS:-}
     ports:
       - 18443:18443
