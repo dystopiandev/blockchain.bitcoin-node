@@ -19,3 +19,5 @@ services:
       ${EXTRA_ARGS:-}
     ports:
       - 8332:8332
+    volumes:
+      - ./.bitcoin:/home/bitcoin/.bitcoin
