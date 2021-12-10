@@ -1,0 +1,20 @@
+version: '3.9'
+
+services:
+  bitcoin-core:
+    build:
+      context: ./bitcoin-core/${DISTRO:-debian}
+      dockerfile: Dockerfile
+    command:
+      -printtoconsole
+      -regtest=1
+      -rest
+      -rpcallowip=10.211.0.0/16
+      -rpcallowip=172.17.0.0/16
+      -rpcallowip=192.168.0.0/16
+      -rpcpassword=${RPC_PASSWORD}
+      -rpcport=18443
+      -rpcuser=${RPC_USER}
+      -server
+    ports:
+      - 18443:18443
