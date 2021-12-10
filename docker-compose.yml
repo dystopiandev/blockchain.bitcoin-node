@@ -13,9 +13,9 @@ services:
       -rpcallowip=172.17.0.0/16
       -rpcallowip=192.168.0.0/16
       -rpcpassword=${RPC_PASSWORD}
-      -rpcport=18443
+      -rpcport=8332
       -rpcuser=${RPC_USER}
       -server
       ${EXTRA_ARGS:-}
     ports:
-      - 18443:18443
+      - 8332:8332
