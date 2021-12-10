@@ -7,7 +7,6 @@ services:
       dockerfile: Dockerfile
     command:
       -printtoconsole
-      -regtest=1
       -rest
       -rpcallowip=10.211.0.0/16
       -rpcallowip=172.17.0.0/16
