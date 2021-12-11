@@ -125,4 +125,4 @@ VOLUME ["/.bitcoin"]
 
 EXPOSE 8332 8333 18332 18333 18443 18444 38333 38332
 
-ENTRYPOINT ["bitcoind", "-datadir", "\"/.bitcoin\"", "-rpcbind=0.0.0.0:8332"]
+ENTRYPOINT ["bitcoind", "-datadir=/.bitcoin", "-rpcbind=0.0.0.0:8332"]
