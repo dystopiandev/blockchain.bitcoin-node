@@ -14,7 +14,7 @@ services:
       -server
       ${EXTRA_ARGS:-}
     ports:
-      - 8332:8332
+      - ${RPC_PORT}:8332
     restart: unless-stopped
     volumes:
       - ${DATA_DIR}:/home/bitcoin/.bitcoin

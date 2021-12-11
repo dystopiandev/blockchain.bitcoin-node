@@ -50,14 +50,8 @@ RUN set -ex \
   && rm *.tar.gz *.asc \
   && rm -rf /opt/bitcoin-${BITCOIN_VERSION}/bin/bitcoin-qt
 
-COPY entrypoint.sh /entrypoint.sh
-
-VOLUME ["/home/bitcoin/.bitcoin"]
+VOLUME ["/.bitcoin"]
 
 EXPOSE 8332 8333 18332 18333 18443 18444 38333 38332
 
-ENTRYPOINT ["/entrypoint.sh"]
-
-RUN bitcoind -version | grep "Bitcoin Core version v${BITCOIN_VERSION}"
-
-CMD ["bitcoind"]
+ENTRYPOINT ["bitcoind", "-datadir", "/.bitcoin"]
